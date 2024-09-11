@@ -1,6 +1,7 @@
 import time
 
 import allure
+from allure_pytest.utils import allure_name
 
 from base.page_factory.component import Component
 
@@ -26,6 +27,7 @@ class Button(Component):
         with allure.step(f'Двойное нажатие на {self.type_of} с именем "{self.name}"'):
             locator = self.get_locator(**kwargs)
             locator.dblclick()
+
 
     def on_click(self, **kwargs) -> None:
         """

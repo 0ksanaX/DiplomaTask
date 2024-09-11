@@ -11,6 +11,16 @@ class AuthorizationMethod:
         BasePage.open_page(page, Url.TEXT_BOX)
 
     @staticmethod
-    def auth_practice_form(page: Page):
-        BasePage.open_page(page, Url.AUTOMATION_PRACTICE_FORM)
+    def check_box(page: Page):
+        BasePage.open_page(page, Url.CHECKBOX)
+
+    @staticmethod
+    def radio_button(page: Page):
+        BasePage.open_page(page, Url.RADIO_BUTTON)
+
+    @staticmethod
+    def buttons(page: Page):
+        BasePage.open_page(page, Url.BUTTONS)
+
+
 

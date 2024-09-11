@@ -19,6 +19,8 @@ class Component(ABC):
         locator = self.locator.format(**kwargs)
         return self.page.locator(locator)
 
+
+
     def click(self, **kwargs) -> None:
         """
         Нажимает на элемент компонента.

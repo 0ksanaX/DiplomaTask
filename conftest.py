@@ -1,8 +1,13 @@
-import pytest
 import time
+
+import pytest
+from playwright.sync_api import Page, sync_playwright, Browser
+
+from base.pages.buttons.buttons_page import ButtonsPage
+from base.pages.check_box.check_box_page import CheckBoxPage
+from base.pages.radio_button.radio_button_page import RadioButtonPage
 from base.pages.text_box.text_box_page import TextBoxPage
 from src.config.playwright import PlaywrightConfig
-from playwright.sync_api import Page, sync_playwright, Browser
 
 
 @pytest.fixture()
@@ -26,3 +31,13 @@ def get_browser(playwright) -> Browser:
 @pytest.fixture(scope='function')
 def text_box(page: Page) -> TextBoxPage:
     return TextBoxPage(page)
+@pytest.fixture(scope='function')
+def radio_button(page: Page) -> RadioButtonPage:
+    return RadioButtonPage(page)
+@pytest.fixture(scope='function')
+def check_box(page: Page) -> CheckBoxPage:
+    return CheckBoxPage(page)
+@pytest.fixture(scope='function')
+def buttons(page: Page) -> ButtonsPage:
+    return ButtonsPage(page)
+
