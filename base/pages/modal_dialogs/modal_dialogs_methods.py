@@ -15,9 +15,13 @@ class ModalDialogsMethods:
         try:
             with allure.step("Small and large modals"):
                 modal_dialogs.small_modal.click()
+                modal_dialogs.small_modal_text.is_visible()
                 modal_dialogs.close_small_modal.click()
                 modal_dialogs.large_modal.click()
+                modal_dialogs.large_modal_text.is_visible()
                 modal_dialogs.close_large_modal.click()
+
+
 
 
         except AssertionError as e:
